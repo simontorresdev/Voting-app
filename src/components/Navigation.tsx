@@ -5,7 +5,7 @@ const Navigation = () => {
         <h1 className="nav__logo">Rule of thumb.</h1>
         <button className="nav__hamburger icon-button">
           <svg width="25" height="20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h25v4H0V0zm0 8h25v4H0V8zm0 8h25v4H0v-4z" fill="#FFF" fill-rule="nonzero" />
+            <path d="M0 0h25v4H0V0zm0 8h25v4H0V8zm0 8h25v4H0v-4z" fill="#FFF" fillRule="nonzero" />
           </svg>
         </button>
         <ul className="nav__links">
@@ -19,9 +19,9 @@ const Navigation = () => {
             <a href="#">Login / Sign Up</a>
           </li>
           <li>
-            <form action="javascript:void(0)">
+            <form action="#">
               <input className="nav__search-input" aria-label="search" type="text" />
-              <button className="nav__search icon-button" type="submit">
+              <button className="nav__search icon-button" type="button">
                 <img src="src/assets/img/search.svg" alt="search" />
               </button>
             </form>

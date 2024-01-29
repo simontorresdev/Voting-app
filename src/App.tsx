@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Navigation from './components/Navigation';
+import VotesSection from './components/VotesSection';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Navigation />
       <Header />
       <MainContent>
-        <h1>hola</h1>
+        <VotesSection />
       </MainContent>
     </>
   );

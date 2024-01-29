@@ -1,0 +1,31 @@
+.switch-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+
+  & h3 {
+    font-size: 45px;
+  }
+
+  & select {
+    color: var(--color-darker-gray);
+    width: 173px;
+    height: 36px;
+    text-align: center;
+    border: 2px solid var(--color-darker-gray);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-darker-gray) 50%),
+      linear-gradient(135deg, var(--color-darker-gray) 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+}
