@@ -1,0 +1,105 @@
+.card {
+  height: 170px;
+  display: flex;
+  padding-left: 24%;
+  margin-bottom: 18px;
+  color: var(--color-white);
+  position: relative;
+
+  & .card-information {
+    flex: 2;
+
+    & .thumbs-result {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    & .card-text {
+      & .card-tittle {
+        color: var(--color-white);
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 63px;
+      }
+
+      & .card-description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.6px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        max-height: 3em;
+      }
+    }
+  }
+
+  & .voting-section {
+    flex: 1;
+    padding: 8px 14px;
+
+    & .voting-last-update {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: right;
+      & span {
+        text-transform: capitalize;
+      }
+    }
+    & .voting-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 17px;
+
+      & .voting-button {
+        color: var(--color-white);
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: center;
+        background: var(--color-darker-background);
+        border: 1px solid var(--color-white);
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  & .percentages {
+    width: 100%;
+    position: absolute;
+    height: 36px;
+    top: calc(100% - 36px);
+    left: 0;
+    display: flex;
+    align-items: center;
+
+    & .percentages-negative,
+    & .percentages-positive {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+      padding: 0px 12px;
+      gap: 6px;
+    }
+
+    & .percentages-negative {
+      background-color: var(--color-green-background);
+    }
+
+    & .percentages-positive {
+      background-color: var(--color-yellow-negative);
+      justify-content: flex-end;
+    }
+  }
+}

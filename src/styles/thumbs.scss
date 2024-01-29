@@ -1,0 +1,13 @@
+.thumbs {
+  padding: 10.5px;
+  background-color: var(--color-green-positive);
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  width: 24px;
+  height: 24px;
+
+  &.thumbs-down {
+    transform: rotate(180deg);
+    background-color: var(--color-yellow-negative);
+  }
+}
