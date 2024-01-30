@@ -17,3 +17,11 @@
   height: 16px;
   padding: 7px;
 }
+
+@media all and (max-width: 768px) {
+  .thumbs {
+    width: 16px;
+    height: 16px;
+    padding: 7px;
+  }
+}

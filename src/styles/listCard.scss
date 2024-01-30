@@ -1,7 +1,7 @@
 .card {
   height: 170px;
   display: flex;
-  padding-left: 24%;
+  padding-left: 267px;
   margin-bottom: 18px;
   color: var(--color-white);
   position: relative;
@@ -129,6 +129,63 @@
     & .percentages-positive {
       background-color: var(--color-yellow-background);
       justify-content: flex-end;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .card {
+    padding-left: 160px;
+
+    & .card-information {
+      & .card-text {
+        & .card-tittle {
+          -webkit-line-clamp: 1;
+          font-size: 28px;
+          line-height: 34px;
+          padding-bottom: 18px;
+          max-height: 1em;
+        }
+
+        & .card-description {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+
+    & .voting-section {
+      & .voting-last-update {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      & .voting-buttons {
+        margin-top: 12px;
+        & .voting-button {
+          padding: 10px 12px;
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    & .percentages {
+      height: 36px;
+      top: calc(100% - 36px);
+
+      & .percentages-negative,
+      & .percentages-positive {
+        font-size: 18px;
+        line-height: 21.6px;
+        padding: 0px 7px;
+        gap: 6px;
+      }
+
+      & img {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

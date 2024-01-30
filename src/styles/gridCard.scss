@@ -1,9 +1,11 @@
 .cards-grid .card {
   height: 348px;
+  width: 348px;
   padding-left: 0%;
   margin-bottom: 0px;
   flex-direction: column;
   justify-content: flex-end;
+  flex: 0 0 auto;
 
   & .card-information {
     flex: 0;
@@ -64,5 +66,12 @@
       width: 15px;
       height: 15px;
     }
+  }
+}
+
+@media all and (max-width: 375px) {
+  .cards-grid .card {
+    height: 300px;
+    width: 300px;
   }
 }
