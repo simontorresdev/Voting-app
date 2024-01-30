@@ -15,6 +15,16 @@
       top: 0;
     }
     & .card-text {
+      & .card-tittle,
+      & .card-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        max-height: 3em;
+      }
+
       & .card-tittle {
         color: var(--color-white);
         font-weight: 400;
@@ -26,12 +36,6 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 21.6px;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
-        max-height: 3em;
       }
     }
   }
@@ -50,11 +54,25 @@
         text-transform: capitalize;
       }
     }
+
     & .voting-buttons {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       margin-top: 17px;
+
+      & input {
+        display: none;
+      }
+
+      .thumbs {
+        transition: all ease 0.3s;
+        border: 2px solid transparent;
+      }
+
+      & input:checked + .thumbs {
+        border: 2px solid var(--color-white);
+      }
 
       & .voting-button {
         color: var(--color-white);
@@ -64,9 +82,15 @@
         line-height: 22px;
         letter-spacing: 0px;
         text-align: center;
-        background: var(--color-darker-background);
+        background: var(--color-dark-active-background);
         border: 1px solid var(--color-white);
         padding: 10px 20px;
+        transition: all ease 0.3s;
+        margin-top: 4px 0px;
+
+        &:disabled {
+          background: var(--color-darker-background);
+        }
       }
     }
   }
@@ -74,8 +98,8 @@
   & .percentages {
     width: 100%;
     position: absolute;
-    height: 36px;
-    top: calc(100% - 36px);
+    height: 54px;
+    top: calc(100% - 54px);
     left: 0;
     display: flex;
     align-items: center;
@@ -85,12 +109,17 @@
       height: 100%;
       display: flex;
       align-items: center;
-      font-size: 18px;
+      font-size: 27px;
+      line-height: 32px;
       font-weight: 400;
-      line-height: 22px;
       letter-spacing: 0px;
       padding: 0px 12px;
-      gap: 6px;
+      gap: 9px;
+    }
+
+    & img {
+      width: 22.5px;
+      height: 22.5px;
     }
 
     & .percentages-negative {
@@ -98,7 +127,7 @@
     }
 
     & .percentages-positive {
-      background-color: var(--color-yellow-negative);
+      background-color: var(--color-yellow-background);
       justify-content: flex-end;
     }
   }

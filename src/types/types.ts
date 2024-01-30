@@ -1,4 +1,5 @@
 export type ViewType = 'list' | 'grid';
+export type VoteType = 'positive' | 'negative' | null;
 
 export interface Vote {
   positive: number;

@@ -10,6 +10,8 @@
   --color-lighter-background: rgba(255, 255, 255, 0.8);
   --color-white: rgba(255, 255, 255, 1);
   --color-green-background: rgba(60, 187, 180, 0.6);
+  --color-yellow-background: rgba(249, 173, 29, 0.6);
+  --color-dark-active-background: rgba(48, 48, 48, 0.6);
 }
 
 * {

@@ -1,15 +1,32 @@
 import { useState } from 'react';
-import { data } from '../assets/data.json';
 import Card from './Card';
-import { Character } from '../types/types';
+import { Character, ViewType, VoteType } from '../types/types';
+import '../styles/cards.scss';
+import { updateCharacters } from '../helpers/helpers';
 
-const CardsSection = () => {
-  const [characters, setcharacters] = useState<Character[]>(data);
+interface Props {
+  viewMode: ViewType;
+  data: any;
+}
+
+const CardsSection = ({ viewMode, data }: Props) => {
+  const [characters, setCharacters] = useState<Character[]>(data);
+
+  const handleVote = (characterIndex: number, voteType: VoteType) => {
+    const updatedCharacters = updateCharacters(characters, characterIndex, voteType);
+    localStorage.setItem('characters', JSON.stringify(updatedCharacters));
+    setCharacters(updatedCharacters);
+  };
 
   return (
-    <div>
+    <div className={viewMode === 'grid' ? 'cards-grid' : 'cards-list'}>
       {characters.map((character, index) => (
-        <Card key={index} character={character} />
+        <Card
+          key={index}
+          character={character}
+          viewMode={viewMode}
+          onVote={(voteType: VoteType) => handleVote(index, voteType)}
+        />
       ))}
     </div>
   );

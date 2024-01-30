@@ -4,7 +4,7 @@ const dateStringMap: Record<string, number> = {
   year: 365 * 24 * 60 * 60 * 1000,
 };
 
-export function generateTimeAgo(lastUpdated: string): string {
+export const generateTimeAgo = (lastUpdated: string): string => {
   const currentDate: Date = new Date();
 
   const updatedDate: Date = new Date(lastUpdated);
@@ -15,4 +15,4 @@ export function generateTimeAgo(lastUpdated: string): string {
   if (timeDifference < dateStringMap.year) return `${Math.floor(timeDifference / dateStringMap.month)} months ago`;
 
   return `${Math.floor(timeDifference / dateStringMap.year)} years ago`;
-}
+};

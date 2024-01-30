@@ -1,0 +1,68 @@
+.cards-grid .card {
+  height: 348px;
+  padding-left: 0%;
+  margin-bottom: 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  & .card-information {
+    flex: 0;
+    display: flex;
+    padding-right: 24px;
+
+    & .thumbs-result {
+      position: relative;
+    }
+
+    & .card-text {
+      & .card-tittle {
+        line-height: 43px;
+      }
+
+      & .card-description {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  & .voting-section {
+    flex: 0;
+    padding: 12px 0px;
+    padding-right: 24px;
+
+    & .voting-last-update {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    & .voting-buttons {
+      margin-top: 12px;
+
+      & .voting-button {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  & .percentages {
+    position: relative;
+    height: 36px;
+    top: 0;
+
+    & .percentages-negative,
+    & .percentages-positive {
+      font-size: 18px;
+      line-height: 21px;
+      gap: 6px;
+    }
+
+    & img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
